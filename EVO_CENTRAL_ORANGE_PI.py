@@ -67,7 +67,7 @@ lora = serial.Serial(
 
 impressora = serial.Serial(
                port='/dev/ttyS1',             
-               baudrate = 9600,
+               baudrate = 19200,
                parity=serial.PARITY_NONE,
                stopbits=serial.STOPBITS_ONE,
                bytesize=serial.EIGHTBITS,
