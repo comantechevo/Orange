@@ -90,8 +90,8 @@ def screen_evo(estado, tipo, texto, valor):
             font1 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf',45)
             font2 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf',10)
             draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
-            draw.text((15, 0), "EVO", font=font1, fill=255)
-            draw.text((0, 45), "EVOLUCAO NO BANHO", font=font2, fill=255)
+            draw.text((20, 0), "EVO", font=font1, fill=255)
+            draw.text((8, 45), "EVOLUCAO NO BANHO", font=font2, fill=255)
     
     elif(estado== 1 and tipo == 0):
         with canvas(device) as draw:
