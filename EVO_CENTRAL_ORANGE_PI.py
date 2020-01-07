@@ -107,7 +107,7 @@ def screen_evo(estado, tipo, texto, valor):
             font2 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf',20)
             draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
             draw.text((10, 5), texto, font=font1, fill=255)
-            draw.text((20, 20), valor, font=font2, fill=255)
+            draw.text((20, 30), valor, font=font2, fill=255)
     
     #Senha gerada
     elif(estado== 1 and tipo == 2):
