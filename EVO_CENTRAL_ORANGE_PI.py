@@ -93,27 +93,30 @@ def screen_evo(estado, tipo, texto, valor):
             draw.text((20, 0), "EVO", font=font1, fill=255)
             draw.text((8, 45), "EVOLUCAO NO BANHO", font=font2, fill=255)
     
+    #AGUARDE, ENTRANDO E GERANDO
     elif(estado== 1 and tipo == 0):
         with canvas(device) as draw:
             font1 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf',18)
             draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
-            draw.text((0, 35), texto, font=font1, fill=255)
-
+            draw.text((0, 30), texto, font=font1, fill=255)
+    
+    #Menu
     elif(estado== 1 and tipo == 1):
         with canvas(device) as draw:
             font1 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf',14)
-            font2 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf',18)
+            font2 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf',20)
             draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
-            draw.text((10, 0), texto, font=font1, fill=255)
-            draw.text((10, 20), valor, font=font2, fill=255)
-
+            draw.text((10, 5), texto, font=font1, fill=255)
+            draw.text((20, 20), valor, font=font2, fill=255)
+    
+    #Senha gerada
     elif(estado== 1 and tipo == 2):
         with canvas(device) as draw:
             font1 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf',12)
             font2 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf',30)
             draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
-            draw.text((10, 0), texto, font=font1, fill=255)
-            draw.text((30, 35), valor, font=font2, fill=255)
+            draw.text((10, 5), texto, font=font1, fill=255)
+            draw.text((30, 30), valor, font=font2, fill=255)
 
 ####################################################################
 ##########################|ENVIA LORA|##############################
@@ -340,7 +343,7 @@ def funcao_menu():
                         arq = open('/root/Desktop/DATABASES/SENHA_MANUAL.txt', 'r')
                         senha_manual = int(arq.read())
                         arq.close()
-                        screen_evo(1, 2, "Senha Manual", str(senha_manual))
+                        screen_evo(1, 1, "Senha Manual", str(senha_manual))
                         passou = 1
 
         
@@ -375,7 +378,7 @@ def funcao_menu():
                 if(passou == 0):
                         arq = open('/root/Desktop/DATABASES/DURACAO_BANHO.txt', 'r')
                         minutes = int(arq.read())
-                        screen_evo(1, 2, 'Duracao banho', (str(minutes)+ ' min'))
+                        screen_evo(1, 1, 'Duracao banho', (str(minutes)+ ' min'))
                         
                         passou = 1
 
