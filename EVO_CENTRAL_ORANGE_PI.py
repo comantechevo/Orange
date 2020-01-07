@@ -109,11 +109,11 @@ def screen_evo(estado, tipo, texto, valor):
 
     elif(estado== 1 and tipo == 2):
         with canvas(device) as draw:
-            font1 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf', 8)
-            font2 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf',18)
+            font1 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf',12)
+            font2 = ImageFont.truetype('./Orange/fonts/VCR_OSD_MONO_1.001.ttf',30)
             draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
             draw.text((10, 0), texto, font=font1, fill=255)
-            draw.text((10, 20), valor, font=font2, fill=255)
+            draw.text((30, 35), valor, font=font2, fill=255)
 
 ####################################################################
 ##########################|ENVIA LORA|##############################
