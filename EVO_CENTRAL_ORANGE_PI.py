@@ -87,8 +87,8 @@ def screen_evo(estado, tipo, texto, valor):
     #Descanço
     if(estado == 0 and tipo == 0):
         with canvas(device) as draw:
-            font1 = ImageFont.truetype('./ssd1306/fonts/Volter__28Goldfish_29.ttf',45)
-            font2 = ImageFont.truetype('./ssd1306/fonts/Volter__28Goldfish_29.ttf',10)
+            font1 = ImageFont.load_default()
+            font2 = ImageFont.load_default()
             draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
             draw.text((20, 0), "EVO", font=font1, fill=255)
             draw.text((8, 45), "EVOLUCAO NO BANHO", font=font2, fill=255)
@@ -96,15 +96,15 @@ def screen_evo(estado, tipo, texto, valor):
     #AGUARDE, ENTRANDO E GERANDO
     elif(estado== 1 and tipo == 0):
         with canvas(device) as draw:
-            font1 = ImageFont.truetype('./ssd1306/fonts/Volter__28Goldfish_29.ttf',18)
+            font1 = ImageFont.load_default())
             draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
             draw.text((0, 30), texto, font=font1, fill=255)
     
     #Menu
     elif(estado== 1 and tipo == 1):
         with canvas(device) as draw:
-            font1 = ImageFont.truetype('./ssd1306/fonts/Volter__28Goldfish_29.ttf',14)
-            font2 = ImageFont.truetype('./ssd1306/fonts/Volter__28Goldfish_29.ttf',20)
+            font1 = ImageFont.load_default()
+            font2 = ImageFont.load_default()
             draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
             draw.text((10, 5), texto, font=font1, fill=255)
             draw.text((20, 30), valor, font=font2, fill=255)
@@ -112,8 +112,8 @@ def screen_evo(estado, tipo, texto, valor):
     #Senha gerada
     elif(estado== 1 and tipo == 2):
         with canvas(device) as draw:
-            font1 = ImageFont.truetype('./ssd1306/fonts/Volter__28Goldfish_29.ttf',12)
-            font2 = ImageFont.truetype('./ssd1306/fonts/Volter__28Goldfish_29.ttf',30)
+            font1 = ImageFont.load_default())
+            font2 = ImageFont.load_default()
             draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
             draw.text((10, 5), texto, font=font1, fill=255)
             draw.text((30, 30), valor, font=font2, fill=255)
