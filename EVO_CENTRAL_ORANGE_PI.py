@@ -96,7 +96,7 @@ def screen_evo(estado, tipo, texto, valor):
     #AGUARDE, ENTRANDO E GERANDO
     elif(estado== 1 and tipo == 0):
         with canvas(device) as draw:
-            font1 = ImageFont.load_default())
+            font1 = ImageFont.load_default()
             draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
             draw.text((0, 30), texto, font=font1, fill=255)
     
