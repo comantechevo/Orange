@@ -1,0 +1,10 @@
+version = 1
+id = 14
+contador = 0
+senhas pagas offline = 0
+senhas pagas online = 0
+senhas cortesia offline = 0
+senhas cortesia online = 0
+baudrate = 19200
+senha manual = 2561
+tempo de banho em minutos = 7
