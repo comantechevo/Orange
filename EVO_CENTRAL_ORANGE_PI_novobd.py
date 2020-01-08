@@ -153,8 +153,9 @@ LINHA
 def database(linha, valor, LERouGRAVAR, incrementa):
         #GRAVAR
         if LERouGRAVAR == 1:
-                arquivo = open('/root/Desktop/DATABASE/database.txt', 'r')
+                arquivo = open('/root/Desktop/DATABASES/database.txt', 'r')
                 conteudo = arquivo.readlines()
+                tamanho = int(len(conteudo))
                 arquivo.close()
 
                 texto = conteudo[int(linha)]
@@ -182,8 +183,8 @@ def database(linha, valor, LERouGRAVAR, incrementa):
                 texto_info = ''.join(texto_info)
                 retorno_linha = texto_info + ' ' + str(novo_armazenar) + '\n'
 
-                arquivo = open('/root/Desktop/DATABASE/database.txt', 'w')
-                for i in range(0, len(conteudo)):
+                arquivo = open('/root/Desktop/DATABASES/database.txt', 'w')
+                for i in range(0, tamanho):
                         if i == int(linha):
                                 arquivo.write(str(retorno_linha))
                         else:
@@ -192,7 +193,7 @@ def database(linha, valor, LERouGRAVAR, incrementa):
                 arquivo.close()
 
         else:
-                arquivo = open('/root/Desktop/DATABASE/database.txt', 'r')
+                arquivo = open('/root/Desktop/DATABASES/database.txt', 'r')
                 conteudo = arquivo.readlines()
                 arquivo.close()
 
