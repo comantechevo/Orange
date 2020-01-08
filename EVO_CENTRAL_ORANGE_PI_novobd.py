@@ -185,9 +185,9 @@ def database(linha, valor, LERouGRAVAR, incrementa):
                 arquivo = open('/root/Desktop/DATABASE/database.txt', 'w')
                 for i in range(0, len(conteudo)):
                         if i == int(linha):
-                        arquivo.write(str(retorno_linha))
+                                arquivo.write(str(retorno_linha))
                         else:
-                        arquivo.write(str(conteudo[i]))
+                                arquivo.write(str(conteudo[i]))
 
                 arquivo.close()
 
